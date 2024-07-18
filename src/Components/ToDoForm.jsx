@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState, useEffect, useRef } from 'react';
 import { Label, TextInput, Button } from 'flowbite-react';
 
-export function ToDoForm({ onSubmit }) {
-  const [input, setInput] = useState('');
+export function ToDoForm({ onSubmit, edit = null }) {
+  const [input, setInput] = useState(edit ? edit.value : '');
 
+  //Focus on a specific input
+
+  const focusInput = useRef(null);
+
+  useEffect(() => {
+    focusInput.current.focus();
+  });
+
+  // Handle change and submission
   const handleChange = (e) => {
     setInput(e.target.value);
   };
@@ -11,14 +21,12 @@ export function ToDoForm({ onSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (input.trim() !== '') {
-      onSubmit({
-        id: Math.floor(Math.random() * 10000),
-        text: input,
-      });
+    onSubmit({
+      id: edit ? edit.id : Math.floor(Math.random() * 10000),
+      text: input,
+    });
 
-      setInput(''); // Clear input after submission
-    }
+    setInput(''); // Clear input after submission
   };
 
   return (
@@ -30,7 +38,10 @@ export function ToDoForm({ onSubmit }) {
         <div className="flex flex-col gap-4">
           <div className="text-left">
             <div className="mb-2 block">
-              <Label htmlFor="base" value="Enter a todo list item" />
+              <Label
+                htmlFor="base"
+                value={edit ? 'Modify your item: ' : 'Add a todo list item:'}
+              />
             </div>
             <div className="flex items-center gap-2">
               <TextInput
@@ -40,8 +51,9 @@ export function ToDoForm({ onSubmit }) {
                 className="flex-grow"
                 value={input}
                 onChange={handleChange}
+                ref={focusInput}
               />
-              <Button onClick={handleSubmit}>Add</Button>
+              <Button onClick={handleSubmit}>{edit ? 'Update' : 'Add'}</Button>
             </div>
           </div>
         </div>
