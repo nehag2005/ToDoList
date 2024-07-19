@@ -21,12 +21,12 @@ The Todo List App is a React-based application designed to manage a list of todo
 
 ## Project Structure
 
-src/: Contains the source code for the application.
-App.js: Main component that renders the ToDoList.
-components/: Contains React components used in the application.
-1. ToDoForm.jsx
-2. ToDoItem.jsx
-3. ToDoList.jsx
+- src/: Contains the source code for the application.
+- App.js: Main component that renders the ToDoList.
+- components/: Contains React components used in the application.
+  1. ToDoForm.jsx
+  2. ToDoItem.jsx
+  3. ToDoList.jsx
 
 ## Components
 1. ToDoForm
