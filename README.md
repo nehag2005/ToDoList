@@ -70,7 +70,7 @@ Solution: I used online resources to learn about the fetch API and asynchronous 
 3. Conditional Rendering
 Challenge: Implementing conditional rendering to switch between adding and updating todos was tricky. I needed to ensure that the form displayed the correct fields and buttons based on the current action.
 
-Solution: I used conditional logic within the ToDoForm component to check if an item was being edited or added. This approach allowed me to show the appropriate labels and buttons based on the action. This was a valuable learning experience in managing component states and rendering conditions dynamically.
+Solution: I implemented functions to handle editing. This approach allowed me to show the appropriate labels and buttons based on the action. This was a valuable learning experience in managing component states.
 
 
 
