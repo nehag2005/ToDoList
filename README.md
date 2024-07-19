@@ -4,6 +4,11 @@
 
 The Todo List App is a React-based application designed to manage a list of todos. It allows users to add, update, complete, sort and delete todos. The app fetches initial todo data from a dummy API and provides a user-friendly interface for managing tasks.
 
+
+## Depolyment
+This project is deployed on Vercel.
+[![Vercel](https://vercel.com/button)](https://to-do-list-6p35dnqez-nehag2005s-projects.vercel.app)
+
 ## Technologies
 - React + Vite
 - DummyJSON API
