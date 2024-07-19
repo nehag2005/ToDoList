@@ -30,33 +30,19 @@ The Todo List App is a React-based application designed to manage a list of todo
 
 ## Components
 1. ToDoForm
-Purpose: Provides a form for adding or updating todo items.
-Props:
-- onSubmit: Function to handle form submission.
-- edit (optional): Object containing the todo item being edited.
-Features:
-- Conditionally renders form fields and buttons based on whether a todo is being added or updated.
+- Purpose: Provides a form for adding or updating todo items.
+- Features: Conditionally renders form fields and buttons based on whether a todo is being added or updated.
   
 2. ToDoItem
-Purpose: Renders individual todo items and allows actions such as marking as complete, deleting, or editing.
-Props:
-- todos: List of todos to display.
-- completeTodo: Function to toggle the completion status.
-- removeTodo: Function to remove a todo.
-- updateTodo: Function to update a todo's text.
-Features:
-Displays todos with styling and action buttons for each todo.
+- Purpose: Renders individual todo items and allows actions such as marking as complete, deleting, or editing.
+- Features: Displays todos with styling and action buttons for each todo.
 
 3. ToDoList
-Purpose: Manages the state of todos and interacts with the API to fetch, add, update, complete, and remove todos.
-State:
-- todos: List of todos.
-- fetching: Indicates if data is being fetched.
-- error: Stores error messages.
-Features:
-- Fetches todos from an API and updates state.
-- Handles adding, updating, completing, and removing todos.
-- Sorts todos with incomplete ones appearing first.
+- Purpose: Manages the state of todos and interacts with the API to fetch, add, update, complete, and remove todos.
+- Features:
+  1. Fetches todos from an API and updates state.
+  2.  Handles adding, updating, completing, and removing todos.
+  3.  Sorts todos with incomplete ones appearing first.
 
 
 
