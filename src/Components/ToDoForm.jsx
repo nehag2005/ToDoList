@@ -2,22 +2,36 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Label, TextInput, Button } from 'flowbite-react';
 
+/**
+ * ToDoForm Component
+ * Provides a form to add or update todo items.
+ *
+ * @param {Object} parameters - Component properties
+ * @param {Function} parameters.onSubmit - Function to handle form submission
+ * @param {Object} [parameters.edit=null] - Data for the todo item being edited (if any)
+ */
 export function ToDoForm({ onSubmit, edit = null }) {
   const [input, setInput] = useState(edit ? edit.value : '');
 
-  //Focus on a specific input
-
+  // Ref to focus the input field automatically
   const focusInput = useRef(null);
 
   useEffect(() => {
     focusInput.current.focus();
-  });
+  }, []);
 
-  // Handle change and submission
+  /**
+   * Handles changes in the input field
+   * @param {Object} e - Event object
+   */
   const handleChange = (e) => {
     setInput(e.target.value);
   };
 
+  /**
+   * Handles form submission
+   * @param {Object} e - Event object
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -26,7 +40,7 @@ export function ToDoForm({ onSubmit, edit = null }) {
       text: input,
     });
 
-    setInput(''); // Clear input after submission
+    setInput('');
   };
 
   return (
@@ -53,7 +67,9 @@ export function ToDoForm({ onSubmit, edit = null }) {
                 onChange={handleChange}
                 ref={focusInput}
               />
-              <Button onClick={handleSubmit}>{edit ? 'Update' : 'Add'}</Button>
+              <Button onClick={handleSubmit} color="blue">
+                {edit ? 'Update' : 'Add'}
+              </Button>
             </div>
           </div>
         </div>
