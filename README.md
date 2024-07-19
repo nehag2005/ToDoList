@@ -6,7 +6,7 @@ The Todo List App is a React-based application designed to manage a list of todo
 
 
 ## Depolyment
-This project is deployed on Vercel.
+This project is deployed on Vercel
 [Vercel Deployment Link](https://to-do-list-6p35dnqez-nehag2005s-projects.vercel.app)
 
 ## Technologies
