@@ -11,12 +11,12 @@ The Todo List App is a React-based application designed to manage a list of todo
 - Tailwind CSS
 
 ## Features
-Add Todos: Users can add new todos.
-Edit Todos: Users can update existing todos.
-Complete/Incomplete Todos: Users can strike through todos to mark them as complete or incomplete.
-Sort Todos: The recently striked todos are placed at the end of the list.
-Remove Todos: Users can delete todos.
-Responsive Design: The application is styled to be responsive and user-friendly.
+- Add Todos: Users can add new todos.
+- Edit Todos: Users can update existing todos.
+- Complete/Incomplete Todos: Users can strike through todos to mark them as complete or incomplete.
+- Sort Todos: The recently striked todos are placed at the end of the list.
+- Remove Todos: Users can delete todos.
+- Responsive Design: The application is styled to be responsive and user-friendly.
 
 
 ## Project Structure
