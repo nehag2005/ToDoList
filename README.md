@@ -14,6 +14,14 @@ The Todo List App is a React-based application designed to manage a list of todo
 - Flowbite React
 - Tailwind CSS
 
+## Steps to locally run the application
+
+1. Clone the repository
+2. Navigate to the project directory
+3. Install the dependencies using "npm install."
+4. Start the server using "npm run dev."
+
+
 ## Features
 - Add Todos: Users can add new todos.
 - Edit Todos: Users can update existing todos.
